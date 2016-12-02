@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Diky Arga Webpage</title>
+  </head>
+  <body>
+    <h1>Diky Arga Webpage</h1>
+    <p>
+      Hi, my name is Diky Arga Anggara, just call me Diky. This is my first webpage (at HACKTIV8 course :D). Let's be full-stack developer with Hacktiv8.
+    </p>
+    <p>
+      This is my target list :
+    </p>
+    <ul>
+      <li>Being full-stack developer</li>
+      <li>Create wonderfull website</li>
+    </ul>
+    <p>
+      Here is my contact
+    </p>
+    <ol>
+      <li>Email : dikyarga.id@gmail.com</li>
+      <li>Telegram : @dikyarga</li>
+    </ol>
+    <h4>Leave your comment below</h4>
+    <form action="/api/contact" method="post">
+      <!-- form elements -->
+      <label for="first-name">First name</label>
+      <br/>
+      <input type="text" name="first-name" value="">
+      <br/>
+      <label for="last-name">Last name</label>
+      <br/>
+      <input type="text" name="last-name" value="">
+      <br/>
+      <label for="gender">Gender:</label>
+      <br/>
+      <input id="male-radio" type="radio" name="gender" value="male">
+      <label for="male-radio">Male</label>
+      <br/>
+      <input id="female-radio" type="radio" name="gender" value="female">
+      <label for="female-radio">Female</label>
+      <br/>
+      <input id="other-radio" type="radio" name="gender" value="other">
+      <label for="other-radio">Other</label>
+      <br/>
+      <label for="programming">Favorite car</label>
+      <br/>
+         <select id="suggestion" name="carList">
+           <option value="mini">Mini Cooper</option>
+           <option value="toyota">Toyota</option>
+           <option value="honda">Honda</option>
+           <option value="mazda">Mazda</option>
+         </select>
+       <br/>
+       <label for="skill">Language spoken :</label>
+       <br/>
+        <input id="bahasa-checkbox" type="checkbox" name="language" value="bahasa">
+        <label for="bahasa-checkbox">Bahasa Indonesia</label>
+        <br/>
+        <input id="english-checkbox" type="checkbox" name="language" value="english">
+        <label for="english-checkbox">English</label>
+        <br/>
+        <input id="jawa-checkbox" type="checkbox" name="language" value="jawa">
+        <label for="jawa-checkbox">Bahasa Jawa</label>
+        <br/>
+        <label for="bio">Bio </label>
+        <br/>
+        <textarea name="bio" rows="8" cols="40"></textarea>
+        <br/>
+        <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
