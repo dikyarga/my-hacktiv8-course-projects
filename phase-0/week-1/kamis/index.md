@@ -12,18 +12,21 @@ Hi, my name is Diky Arga Anggara, just call me **Diky**. This is my first Markdo
   * Telegram : @dikyarga
   * Github : @dikyarga
 ###My daily routine :
+_use Markdown Github Flavor_
 
-Morning | Afternood | Evening | Night |
-| Monday | Code, Cycling & Repeat |
-| Tuesday | Code, Cycling & Repeat |
-| Wednesday | Code, Cycling & Repeat |
-| Thursday | Code, Cycling & Repeat |
-| Friday | Code, Cycling & Repeat |
-| Saturday | Code, Cycling & Repeat |
-| Sunday | Code, Cycling & Repeat |
+Day | Morning | Afternood | Evening | Night
+--- | ------- | --------- | ------- | -----
+Monday | Code, Cycling & Repeat |
+Tuesday | Code, Cycling & Repeat |
+Wednesday | Code, Cycling & Repeat |
+Thursday | Code, Cycling & Repeat |
+Friday | Code, Cycling & Repeat |
+Saturday | Code, Cycling & Repeat |
+Sunday | Code, Cycling & Repeat |
 
 ####Leave your comment below</h4>
-* Makrdown for form formating language * [VMD] (https://github.com/brikis98/wmd)
+_Makrdown for form formating language : [VMD] (https://github.com/brikis98/wmd)_
+
 First name = ___
 Last name = ___
 Gender = (x) male () female () other
