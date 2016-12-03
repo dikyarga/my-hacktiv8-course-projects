@@ -1,4 +1,4 @@
-# Diky Arga's Webpage
+# Diky Arga's Markdown doc
 ## Welcome everyone!
 ![My profile picture] (images/profile/diky-arga-telegram-profile-picture.jpg)
 
@@ -7,22 +7,25 @@ Hi, my name is Diky Arga Anggara, just call me **Diky**. This is my first Markdo
   1. Being full-stack developer
   2. Create wonderfull website
   3. Make a impactful app
+
 ### Here is my contact :
   * Email : dikyarga.id@gmail.com
-  * Telegram : @dikyarga
-  * Github : @dikyarga
+  * Telegram : [@dikyarga] (https://telegram.me/dikyarga)
+  * Github : [@dikyarga] (https://github.com/dikyarga)
+  * Twitter : [@dikyarga] (https://twitter.com/dikyarga)
+
 ###My daily routine :
 _use Markdown Github Flavor_
 
 Day | Morning | Afternood | Evening | Night
 --- | ------- | --------- | ------- | -----
-Monday | Code, Cycling & Repeat |
-Tuesday | Code, Cycling & Repeat |
-Wednesday | Code, Cycling & Repeat |
-Thursday | Code, Cycling & Repeat |
-Friday | Code, Cycling & Repeat |
-Saturday | Code, Cycling & Repeat |
-Sunday | Code, Cycling & Repeat |
+Monday | Code | Cycling | Eat | Repeat
+Tuesday | Code | Cycling | Eat | Repeat
+Wednesday | Code | Cycling | Eat | Repeat
+Thursday | Code | Cycling | Eat | Repeat
+Friday | Code | Cycling | Eat | Repeat
+Saturday | Code | Cycling | Eat | Repeat
+Sunday | Code | Cycling | Eat | Repeat
 
 ####Leave your comment below</h4>
 _Makrdown for form formating language : [VMD] (https://github.com/brikis98/wmd)_
