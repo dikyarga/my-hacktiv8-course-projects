@@ -1,0 +1,84 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: url(images/background/my-aircraft-back-to-indonesia.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.header{
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  background: yellow;
+  border-top: 10px;
+  border-bottom: 10px;
+  border-style: dashed;
+  font-family: Arial;
+}
+.body{
+  margin: 50px;
+  padding: 50px;
+  border: 3px solid black;
+  background-color: #fff;
+}
+.comment{
+  width: 45%;
+  height: 45%;
+  float: right;
+  padding: 30px;
+  border-radius: 50px 0 0 50px;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#B3FE2B, #F7FE04); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#B3FE2B, #F7FE04); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#B3FE2B, #F7FE04); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#B3FE2B, #F7FE04); /* Standard syntax */
+  font-family: Courier, serif;
+  color: red;
+  border-left: outset;
+  border-left-color: #000;
+  border-left-width: 10px;
+}
+.profile-picture{
+  display:block;
+  margin:auto;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  border: 2px solid black;
+  text-align: center;
+}
+table{
+   border-collapse: collapse;
+}
+table, th, td {
+   border: 2px solid black;
+}
+.table-text{
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}
+
+h1{
+  color: red;
+  letter-spacing: 0.2em;
+  font-size: 45px;
+}
+h2{
+  text-transform: uppercase;
+  color: red;
+  font-style: italic;
+}
+p{
+  line-height: 2;
+}
+
+
+.comment h4{
+  text-align: center;
+  color: red;
+  font-size: 20px;
+}
