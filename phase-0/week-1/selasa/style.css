@@ -20,6 +20,12 @@ h1{
   color: red;
   font-size: 45px;
 }
+.title-site{
+  text-transform: uppercase;
+}
+.comment-title{
+  text-transform: capitalize;
+}
 h2{
   text-transform: uppercase;
   color: red;
