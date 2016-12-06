@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mengenal penggunaan Conditional (If-else) dalam JavaScript</title>
+  </head>
+  <body>
+    <h3>Tantangan :
+      <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/anchor-menggunakan-if-else.md" target="_blank">Mengenal penggunaan Conditional (If-else) dalam JavaScript</a>
+    </h3>
+    <p>
+      Open Developer Tool : CTRL + SHIFT + I
+      <br/>
+      Atau lihat Online di : <a href="http://jsbin.com/doqajaj/5/edit?js,console">JSBin - doqajaj</a>
+    </p>
+    <h3>Hasil : </h3>
+    <img src="screenshots/Mengenal-penggunaan-Conditional-(If-else)-dalam-JavaScript.png" alt="" />
+  </body>
+  <script>
+  var nama = 'Diky';
+  var peran = 'Ksatria';
+
+  if (nama === '') {
+    console.log('Harap beri nama karaktermu, Bro');
+    if (nama === '') {
+      console.log('Pilih peranmu untuk memulai game');
+    } else if (peran === 'Ksatria') {
+      console.log('Halo Ksatria Budi, kamu dapat menyerang dengan senjatamu!');
+    } else if (peran === 'Tabib') {
+      console.log('Halo Tabib Chika, kamu akan membantu temanmu yang terluka.');
+    } else if (peran === 'Penyihir') {
+      console.log('Halo Penyihir Dino, ciptakan keajaiban yang membantu kemenanganmu!');
+    }
+  } else {
+    if (peran === 'Ksatria') {
+      console.log('Selamat datang di Dunia Proxytia, ' + nama);
+      console.log('Halo Ksatria Budi, kamu dapat menyerang dengan senjatamu!');
+    } else if (peran === 'Tabib') {
+      console.log('Selamat datang di Dunia Proxytia, ' + nama);
+      console.log('Halo Tabib Chika, kamu akan membantu temanmu yang terluka.');
+    } else if (peran === 'Penyihir') {
+      console.log('Selamat datang di Dunia Proxytia, ' + nama);
+      console.log('Halo Penyihir Dino, ciptakan keajaiban yang membantu kemenanganmu!');
+    }
+  }
+  </script>
+</html>
