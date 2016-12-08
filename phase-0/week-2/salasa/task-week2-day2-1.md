@@ -10,4 +10,10 @@ IF kata = "Saya Belajar JavaScript!" THEN
   TULISKAN "Pasti Bisa!"
 
 ### Tugas 3
-SIMPAN
+__Versi Do-While__ 
+SIMPAN "angka" dengan nilai 1
+DO
+  IF "angka" habis dibagi 3
+    TAMPILKAN "angka"
+  HITUNG "angka" + 1
+WHILE "angka" belum mencapai "angka" yang disimpan sebelumnya
