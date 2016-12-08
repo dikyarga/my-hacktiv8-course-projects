@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mengubah Psedocode Menjadi Kode JavaScript - Hard - Soal 2</title>
+  </head>
+  <body>
+    <h1>Mengubah Psedocode Menjadi Kode JavaScript Hard </h1>
+    <h2>Soal 2</h2>
+    <b>Brief :</b>
+    <br/>
+    <code>
+      SIMPAN karakter kosong pada `pagar` <br>
+      FOR setiap pertambahan 1 pada `index1` dari 1 sampai 10: <br>
+          FOR setiap pertambahan 1 pada `index2` dari 0 sampai 10: <br>
+              TAMBAHKAN `pagar` dengan karakter "#" <br>
+          ENDFOR <br>
+          TULISKAN `pagar` <br>
+          SIMPAN karakter kosong pada `pagar` <br>
+      ENDFOR <br>
+    </code>
+    <br>
+    <br>
+    Untuk melihat hasilnya : <b>Open Developer Tool / CTRL + SHIFT + I</b>
+    <script>
+      var pagar = '';
+      for (var i = 1; i <= 10; i++) {
+        for (var j = 0;j <=10 ; j++) {
+          pagar += '#';
+        }
+        console.log(pagar);
+        pagar = '';
+      }
+    </script>
+  </body>
+</html>
