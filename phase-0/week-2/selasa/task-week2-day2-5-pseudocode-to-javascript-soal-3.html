@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mengubah Psedocode Menjadi Kode JavaScript - Tugas 3</title>
+  </head>
+  <body>
+    <h1>Mengubah Psedocode Menjadi Kode JavaScript</h1>
+    <h2>Soal 3</h2>
+    <b>Brief :</b>
+    <br/>
+    <code>
+      MASUKKAN sebuah tahun pada `tahun` <br>
+      IF `tahun` habis dibagi 4 THEN: <br>
+          IF `tahun` tidak habis dibagi 100 THEN: <br>
+              TULISKAN "`tahun` adalah tahun kabisat" <br>
+          ELSE: <br>
+              IF `tahun` habis dibagi 400 THEN: <br>
+                  TULISKAN "`tahun` adalah tahun kabisat" <br>
+              ELSE: <br>
+                  TULISKAN "`tahun` adalah bukan tahun kabisat" <br>
+              ENDIF <br>
+          ENDIF  <br>
+      ELSE: <br>
+          TULISKAN "`tahun` adalah bukan tahun kabisat" <br>
+      ENDIF <br>
+    </code>
+    <br>
+    <br>
+    Untuk melihat hasilnya : <b>Open Developer Tool / CTRL + SHIFT + I</b>
+    <script>
+      var tahun = 2016;
+      if (tahun % 4 === 0) {
+        if (tahun % 100 === 0) {
+          console.log( tahun + ' adalah tahun kabisat');
+        } else {
+          if (tahun % 400 === 0) {
+            console.log( tahun + ' adalah tahun kabisat');
+          } else {
+            console.log( tahun + ' adalah bukan tahun kabisat');
+          }
+        }
+      } else {
+        console.log( tahun + ' adalah bukan tahun kabisat');
+      }
+    </script>
+  </body>
+</html>
