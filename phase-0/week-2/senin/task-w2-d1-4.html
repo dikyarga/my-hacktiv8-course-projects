@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mampu menggabungkan konsep Conditional dan Iteration dalam kasus sederhana</title>
+  </head>
+  <body>
+    <h3>Tantangan :
+      <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/ganjil-genap-dll.md" target="_blank">
+        Mampu menggabungkan konsep Conditional dan Iteration dalam kasus sederhana</a>
+    </h3>
+    <p>
+      Open Developer Tool : CTRL + SHIFT + I
+      <br/>
+      Atau lihat Online di : <a href="http://jsbin.com/hiseha/edit?js,console">JSBin - hiseha</a>
+    </p>
+  </body>
+  <script>
+  // Ganjil Genap
+for (i=1; i<=100; i++) {
+  if (i % 2 == 0){
+    console.log(i + ' Genap');
+  } else {
+    console.log(i + ' Ganjil');
+  }
+}
+console.log('------------------------------------');
+// Kepipatan 2
+var dua = 2;
+for (i=1; i<=100; i +=dua){
+  if (i % 3 == 0){
+    console.log(i + " adalah kelipatan dari " + (dua+1));
+  }
+}
+console.log('------------------------------------');
+// Kepipatan 5
+var lima = 5;
+for (j=1; j<=100; j += lima){
+  if (j % (lima+1) === 0){
+    console.log(j + " adalah kelipatan dari " + (lima+1));
+  }
+}
+console.log('------------------------------------');
+// Kepipatan 9
+var sembilan = 9;
+for (i=1; i<=100; i+=sembilan){
+  if (i % (sembilan+1) == 0){
+    var temp = 9+1;
+    console.log(i + " adalah kelipatan dari " + (sembilan+1));
+  }
+}
+
+  </script>
+</html>
