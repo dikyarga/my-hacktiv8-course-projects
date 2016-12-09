@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Proxytia to Next Level</title>
+  </head>
+  <body>
+    <h1>Proxytia to Next Level </h1>
+    <h2>Tantang : <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/rocket-loop-conditional.md"></a>Proxytia to Next Level</h2>
+    </code>
+    <br>
+    <br>
+    Untuk melihat hasilnya : <b>Open Developer Tool / CTRL + SHIFT + I</b>
+    <script>
+     var nama = 'Diky';
+     var peran = 'Ksatria';
+     var tahunLahir = 1995;
+     var umur = 2016 - tahunLahir;
+     var playerHealth = tahunLahir * Math.random();
+     var monsterHealth = tahunLahir * Math.random();
+     var kodeMonster = Math.floor(Math.pow(100, Math.random()));
+
+     if (nama === '') {
+       peran = 'kacung';
+     }
+     for (var i = 1; i < tahunLahir; i++) {
+       if (i % tahunLahir === 0) {
+         console.log(peran + ' ' + nama + ' menyerang monster!');
+       } else if (i % kodeMonster) {
+         console.log('monster menyerang ' + peran + ' ' + nama + '!');
+       } else if (i % tahunLahir === 0 && i % kodeMonster){
+         console.log('Health keduanya bertambah');
+         playerHealth += kodeMonster;
+         monsterHealth += umur;
+       } else if(playerHealth > monsterHealth) {
+         console.log('Selamat, ' + peran + ' ' + nama + ' memenangkan pertarungan!');
+       } else {
+         console.log('Sayang sekali, ' + peran + ' ' + nama + ' dikalahkan monster...');
+       }
+     }
+
+     if (nama === '') {
+       console.log('Harap beri nama karaktermu, Bro');
+       if (nama === '') {
+         console.log('Pilih peranmu untuk memulai game');
+       } else if (peran === 'Ksatria') {
+         console.log('Halo Ksatria Budi, kamu dapat menyerang dengan senjatamu!');
+       } else if (peran === 'Tabib') {
+         console.log('Halo Tabib Chika, kamu akan membantu temanmu yang terluka.');
+       } else if (peran === 'Penyihir') {
+         console.log('Halo Penyihir Dino, ciptakan keajaiban yang membantu kemenanganmu!');
+       }
+     } else {
+       if (peran === 'Ksatria') {
+         console.log('Selamat datang di Dunia Proxytia, ' + nama);
+         console.log('Halo Ksatria Budi, kamu dapat menyerang dengan senjatamu!');
+       } else if (peran === 'Tabib') {
+         console.log('Selamat datang di Dunia Proxytia, ' + nama);
+         console.log('Halo Tabib Chika, kamu akan membantu temanmu yang terluka.');
+       } else if (peran === 'Penyihir') {
+         console.log('Selamat datang di Dunia Proxytia, ' + nama);
+         console.log('Halo Penyihir Dino, ciptakan keajaiban yang membantu kemenanganmu!');
+       }
+     }
+    </script>
+  </body>
+</html>
