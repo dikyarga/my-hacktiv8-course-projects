@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Menggunakan Object dalam JavaScript 2</title>
+  </head>
+  <body>
+    <h1>Menggunakan Object dalam JavaScript 2 </h1>
+    <h3>Detail Tugas : <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/anchor-object-2.md">Object JS - 2</a></h3>
+      <br>
+    Untuk melihat hasilnya : <b>Open Developer Tool / CTRL + SHIFT + I</b>
+    <script>
+    var Teman = function (nama, kabar, pekerjaan) {
+      this.nama = nama;
+      this.kabar = kabar;
+      this.pekerjaan = pekerjaan;
+      this.sapa = function () {
+        console.log('Hallo '+ this.nama + ', apa kabar ?');
+      };
+      this.balasSapa = function () {
+        console.log('Hallo ' + this.nama + ', kabarku ' + this.kabar);
+      };
+      this.tanyaPekerjaan = function () {
+        console.log('Apa pekerjaanmu saat ini?');
+      };
+      this.balasPekerjaan = function () {
+        console.log('Pekerjaanku saat ini adalah ' + this.pekerjaan);
+      };
+      this.berpisah = function (teman) {
+        console.log('Senang bertemu denganmu '+ teman.nama +' , semoga kamu sukses sebagai '+ teman.pekerjaan);
+      };
+    }
+    var budi = new Teman('Budi', 'baik', 'developer');
+    var tono = new Teman('Tono', 'baik', 'chef');
+
+    budi.sapa(tono.nama);
+    tono.balasSapa(budi.nama);
+    budi.tanyaPekerjaan();
+    tono.balasPekerjaan();
+    budi.berpisah(tono);
+    </script>
+  </body>
+</html>
