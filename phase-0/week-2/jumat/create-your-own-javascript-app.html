@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create Your Own JavaScript App</title>
+  </head>
+  <body>
+    <h1>Create Your Own JavaScript App</h1>
+    <h4>Detail Tugas : <a href="https://github.com/hacktiv8/phase-0-activities/blob/master/modules/js-application.md">Create Your Own JavaScript App</a></h4>
+
+    <h2>To do list <b>CLI</b> (Command Line Interface)</h2>
+    Untuk menggunakanya, lihat Developer Tool / CRTL + SHIFT + I
+    <br>
+    <script>
+    function get_todos() {
+      var todos = new Array;
+      var todos_str = localStorage.getItem('todo');
+      if (todos_str != null) {
+          todos = JSON.parse(todos_str);
+      }
+      return todos;
+    }
+
+    function add(taskName) {
+      var task = taskName;
+      var todos = get_todos();
+      todos.push(task);
+      localStorage.setItem('todo', JSON.stringify(todos));
+
+      show();
+    }
+    function show() {
+      var todos = get_todos();
+      console.log(todos.length);
+      var results = '';
+      for(var i=0; i< todos.length; i++) {
+        console.log(i + ' - ' + todos[1]);
+      };
+
+    }
+
+    function remove(id) {
+      var todos = get_todos();
+      var deletedTodo = todos[id];
+      todos.splice(id, 1);
+      localStorage.setItem('todo', JSON.stringify(todos));
+
+      show();
+
+      return 'sukses menghapus ' + deletedTodo;
+    }
+    // get_todos();
+    // add('cuci piring');
+    // show();
+    // remove(0);
+
+
+    </script>
+  </body>
+</html>
