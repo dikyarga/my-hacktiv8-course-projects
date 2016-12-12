@@ -13,11 +13,11 @@
     <br>
     <script>
 
-    function add (task, status) {
+    function add (task) {
       var todos = get_todos();
       todos.push({
         taskName : task,
-        status : status
+        status : 'belum-selesai'
       });
       localStorage.setItem('todo', JSON.stringify(todos));
       show();
@@ -34,23 +34,26 @@
 
     function show() {
       var todos = get_todos();
-      console.log(todos.length);
-      console.log(todos);
-      var results = '';
-      // Task finished
-      for(var i=0; i < todos.length; i++) {
-        console.log('Finished task : ');
-        if (todos[i].status === 'selesai') {
-          console.log(i + ' - ' + todos[i].taskName);
-        }
-      };
-      // Task list on progress
-      for(var i=0; i < todos.length; i++) {
-        console.log('Un-finished task : ');
-        if (todos[i].status !== 'selesai') {
-          console.log(i + ' - ' + todos[i].taskName);
-        }
-      };
+      if (todos.length === 0) {
+        console.log('Todo list Anda kosong');
+        console.log('Tambah todo list dengan perintah : add("nama task");');
+      } else {
+        var results = '';
+        // Task list on progress
+        for(var i=0; i < todos.length; i++) {
+          console.log('Un-finished task : ');
+          if (todos[i].status !== 'selesai') {
+            console.log(i + ' - ' + todos[i].taskName);
+          }
+        };
+        // Task finished
+        for(var i=0; i < todos.length; i++) {
+          console.log('Finished task : ');
+          if (todos[i].status === 'selesai') {
+            console.log(i + ' - ' + todos[i].taskName);
+          }
+        };
+      }
 
 
     }
@@ -65,6 +68,34 @@
 
       return 'sukses menghapus ' + deletedTodo.taskName;
     }
+
+    function changeStatus (id) {
+      var todos = get_todos();
+      var updatedTodo = todos[id];
+      console.log(todos);
+      console.log(updatedTodo);
+      if (updatedTodo.status === 'selesai') {
+        updatedTodo.status = 'belum-selesai';
+      } else {
+        updatedTodo.status = 'selesai';
+      }
+      todos.splice(id, 1, updatedTodo);
+      console.log(updatedTodo);
+      console.log(todos);
+    }
+
+    function instruction () {
+      console.log('Instruction : ');
+      console.log('Untuk menambah task, panggil perintah : add("nama task");');
+      console.log('Untuk melihat task, panggil perintah : show();');
+      console.log('Untuk menghapus task, panggil perintah : remove(indexTask);');
+      console.log('Untuk mengubah status task, panggil perintah : changeStatus  (indexTask);');
+      console.log('Untuk membuka instruksi ini, panggil perintah : instruction();');
+    }
+
+    console.log('Selamat datang di aplikasi todo list khusus untuk JS Geek.');
+    console.log('----------------------------------------------------------');
+    instruction();
     </script>
   </body>
 </html>
