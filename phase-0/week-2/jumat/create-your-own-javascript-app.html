@@ -13,11 +13,11 @@
     <br>
     <script>
 
-    function add (task) {
+    function add (task, status) {
       var todos = get_todos();
       todos.push({
         taskName : task,
-        status : 'belum-selesai'
+        status : status
       });
       localStorage.setItem('todo', JSON.stringify(todos));
       show();
@@ -37,9 +37,21 @@
       console.log(todos.length);
       console.log(todos);
       var results = '';
-      for(var i=0; i< todos.length; i++) {
-        console.log(i + ' - ' + todos[i].taskName);
+      // Task finished
+      for(var i=0; i < todos.length; i++) {
+        console.log('Finished task : ');
+        if (todos[i].status === 'selesai') {
+          console.log(i + ' - ' + todos[i].taskName);
+        }
       };
+      // Task list on progress
+      for(var i=0; i < todos.length; i++) {
+        console.log('Un-finished task : ');
+        if (todos[i].status !== 'selesai') {
+          console.log(i + ' - ' + todos[i].taskName);
+        }
+      };
+
 
     }
     //
