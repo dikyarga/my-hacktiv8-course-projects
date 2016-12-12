@@ -14,6 +14,7 @@
 
     </p>
     Untuk menggunakanya, lihat Developer Tool / CRTL + SHIFT + I
+    <h3>Fitur aplikasi</h3>
     <p>
       Aplikasi ini memiliki fungsi-fungsi dasar selayaknya aplikasi todo list biasanya, yaiyu :
       <ul>
@@ -29,14 +30,91 @@
       </ul>
     </p>
 
+    <h3>Pseudocode : </h3>
     <p>
-      <h5>Pseudocode : </h5>
-      Fungsi
+      <b>Fungsi show()</b> atau menampilkan todo list:
+      <ul>
+        <li>DECLARE variable todos dan ISI dengan list todo yang talah ada</li>
+        <li>IF panjang isi todo sama dengan 0, THEN</li>
+        <ul>
+          <li>Display 'todo list Anda kosong'</li>
+        </ul>
+        <li>ELSE</li>
+        <ul>
+          <li>Display 'Un-finished todo :'</li>
+          <li>FOR setiap todo dalam todo list</li>
+          <ul>
+            <li>IF status dari todo tidak sama dengan 'selesai', THEN</li>
+            <ul>
+              <li>Display index dan nama task dari todo</li>
+            </ul>
+          </ul>
+          <li>Display 'Finished todo :'</li>
+          <li>FOR setiap todo dalam todo list</li>
+          <ul>
+            <li>IF status dari todo sama dengan 'selesai', THEN</li>
+            <ul>
+              <li>Display index dan nama task dari todo</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+      <b>Fungsi get_todos atau mengambil todo list yang talah ada </b>
+      <ul>
+        <li>DECLARE variable todos dengan tipe data Array</li>
+        <li>DECLARE variable todos_str and ASSIGN from localStorage dengan field 'todo'</li>
+        <li>IF todos_str ada isinya atau tidak kosong</li>
+        <ul>
+          <li>ASSIGN todos oleh todos_str yang di konversi menjadi format JSON</li>
+        </ul>
+        <li>RETURN hasil akhir todos</li>
+      </ul>
+      <b>Fungsi add('nama task') atau menambah todo baru</b>
+      <ul>
+        <li>DECLARE variable todos dan MASUKAN dari dari todo yang telah ada dengan memanggil fungsi get_todos()</li>
+        <li>PUSH object todo baru kedalam array 'todos'</li>
+        <li>SAVE ke localStorage dengan field 'todo' yang telah di konversi menjadi format string yang semulanya JSON</li>
+        <li>DISPLAY daftar todo yang telah diperbaharui </li>
+      </ul>
+      <b>Fungsi remove(indexTask) atau menghapus todo dari todo list</b>
+      <ul>
+        <li>DECLARE variable todos dan MASUKAN dari dari todo yang telah ada dengan memanggil fungsi get_todos()</li>
+        <li>DEVLARE variable 'deletedTodo' dan ambil nilai dari array todos sebelumnya yang memiliki index sesuai paramater</li>
+        <li>SPLICE array todos dimulai dari index sesuai id parmater sampai satu item setelahnya</li>
+        <li>SAVE array todos baru kedalam localStorage dengan mengkonversinya terlebih dahulu menjadi string yang semula adalah berformat JSON</li>
+        <li>DISPLAY daftar todo terbaru dengan memanggil fungsi <i>show()</i></li>
+        <li>RETURN pesan bahwa todo yang ingin dihapus telah berhasil dihapus</li>
+      </ul>
+      <b>Fungsi changeStatus(indexTask) atau Memperbaharui status dari todo</b>
+      <ul>
+        <li>DECLARE variable todos dan MASUKAN dari dari todo yang telah ada dengan memanggil fungsi get_todos()</li>
+        <li>DEVLARE variable 'updatedTodo' dan ambil nilai dari array todos sebelumnya yang memiliki index sesuai paramater</li>
+        <li>IF status dari todo sama dengan 'selesai', THEN</li>
+        <ul>
+          <li>CHANGE status todo menjadi 'belum-selesai'</li>
+        </ul>
+        <li>ELSE</li>
+        <ul>
+          <li>CHANGE status todo menjadi 'selesai'</li>
+        </ul>
+        <li>SPLICE todo dimulai dari index todo sesuai id, hingga satu setelah index tersebut, dan di ikuti object todo yang baru di perbaharui</li>
+        <li>SAVE array todos baru kedalam localStorage dengan mengkonversinya terlebih dahulu menjadi string yang semula adalah berformat JSON</li>
+        <li>DISPLAY pesan bahwa staus dari todo tersebut telah berhasil di perbaharui</li>
+      </ul>
+      <b>Fungsi instruction() atau menampilkan instruksi / cara menggunkan aplikasi ini</b>
+      <ul>
+        <li>DISPLAY cara menambah task</li>
+        <li>DISPLAY cara melihat daftar task</li>
+        <li>DISPLAY cara menghapus task</li>
+        <li>DISPLAY cara Memperbaharui status task</li>
+        <li>DISPLAY cara menampilkan instruksi ini sendiri</li>
+      </ul>
     </p>
+
+    <h3>Di balik layar</h3>
     <p>
-      <h5>Di balik layar</h5>
       Saya menganggap setiap todo adalah object, todo list adalah Array yang berisi kumpulan dari object todo.
-      Mengunakan penyimpanan (mirip Database) bawaan HTML5 yaitu localStorage guna menyimpan todo list.
+      Mengunakan penyimpanan (mirip Database) bawaan HTML5 yaitu <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> guna menyimpan todo list.
     </p>
     <br>
 
