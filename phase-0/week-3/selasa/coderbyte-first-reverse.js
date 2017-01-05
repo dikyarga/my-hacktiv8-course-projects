@@ -1,7 +1,3 @@
-// function reverseString(str) {
-//     return str.split("").reverse().join("");
-// }
-// console.log(reverseString("hello"));
 function FirstReverse(str) {
 
   // code goes here
