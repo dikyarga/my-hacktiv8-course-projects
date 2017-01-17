@@ -14,6 +14,5 @@ function OtherProducts(arr) {
   }
   // code goes here
   return str;
-
 }
 console.log(OtherProducts([1,2,3,100]));
