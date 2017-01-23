@@ -12,6 +12,19 @@ var pageTitleElementsContent = pageTitleElement.innerHTML;
 console.log('isi <div id="page-title"> :' + pageTitleElementsContent);
 // isi <div id="page-title"> adalah Sample Page Title
 
-var pageBoxElementsContent = pageBoxElements.innerHTML;
-console.log('isi <div class="page-box"> :' + pageBoxElementsContent);
-// isi <div class="page-box"> adalah undefined!
+// Mengambil isi elemen pageBoxElements yang pertama, yaitu index ke 0
+var firstPageBoxElement         = pageBoxElements[0];
+var firstpageBoxElementContent  = firstPageBoxElement.innerHTML;
+
+// Mengambil isi elemen pageBoxElements yang kedua, yaitu index ke 1
+var secondPageBoxElement         = pageBoxElements[1];
+var secondpageBoxElementContent  = secondPageBoxElement.innerHTML;
+
+// Mengambil isi elemen pageBoxElements yang ketiga, yaitu index ke 2
+var thirdPageBoxElement         = pageBoxElements[2];
+var thirdpageBoxElementContent  = thirdPageBoxElement.innerHTML;
+
+// Menampilkan isi elemen dengan console.log
+console.log('isi <div class="page-box"> yang pertama:' + firstpageBoxElementContent);
+console.log('isi <div class="page-box"> yang kedua:' + secondpageBoxElementContent);
+console.log('isi <div class="page-box"> yang ketiga:' + thirdpageBoxElementContent);
