@@ -41,7 +41,6 @@ pageTitleElement.innerHTML = 'Updated Content of Page Title Element';
 var newPageTitleElementContent = pageTitleElement.innerHTML;
 console.log('isi baru dari <div id="page-title"> :' + newPageTitleElementContent);
 
-
 // Mengubah isi pageTitleElement dengan tag HTML
 pageTitleElement.innerHTML = '<h2>Updated Content of Page Title Element</h2>';
 var newPageTitleElementContent = pageTitleElement.innerHTML;
