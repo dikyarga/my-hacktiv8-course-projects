@@ -35,3 +35,8 @@ for(var i = 0; i < pageBoxElements.length; i++) {
   var currentPageBoxElementContent  = currentPageBoxElement.innerHTML;
   console.log('isi <div class="page-box"> index ke ' + i + ': ' + currentPageBoxElementContent);
 }
+
+// Mengubah isi pageTitleElement
+pageTitleElement.innerHTML = 'Updated Content of Page Title Element';
+var newPageTitleElementContent = pageTitleElement.innerHTML;
+console.log('isi baru dari <div id="page-title"> :' + newPageTitleElementContent);
