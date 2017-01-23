@@ -28,3 +28,10 @@ var thirdpageBoxElementContent  = thirdPageBoxElement.innerHTML;
 console.log('isi <div class="page-box"> yang pertama:' + firstpageBoxElementContent);
 console.log('isi <div class="page-box"> yang kedua:' + secondpageBoxElementContent);
 console.log('isi <div class="page-box"> yang ketiga:' + thirdpageBoxElementContent);
+
+// Meloop array pageBoxElements
+for(var i = 0; i < pageBoxElements.length; i++) {
+  var currentPageBoxElement         = pageBoxElements[i];
+  var currentPageBoxElementContent  = currentPageBoxElement.innerHTML;
+  console.log('isi <div class="page-box"> index ke ' + i + ': ' + currentPageBoxElementContent);
+}
