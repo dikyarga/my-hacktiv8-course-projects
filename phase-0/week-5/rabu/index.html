@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Simple Form Validation using JavaScript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.6/css/uikit.min.css" />
+</head>
+
+<body>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container uk-container-small">
+
+            <h2 class="uk-heading-line"><span>Registration Form</span></h2>
+
+            <div class="uk-grid-match" uk-grid>
+                <div class="uk-width-1-2@m">
+                    <form name="my_form" class="uk-form-stacked" action="#" id="main-form" onsubmit="return validate()">
+
+                        <div class="uk-margin-small">
+                            <label class="uk-form-label" for="form-stacked-text">Username</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" name="username" id="username" type="text" placeholder="Your username...">
+                            </div>
+                        </div>
+                        <div class="uk-margin-small">
+                            <label class="uk-form-label" for="form-stacked-text">Password</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" name="password" id="password" type="password" placeholder="Your password...">
+                            </div>
+                        </div>
+                        <div class="uk-margin-small">
+                            <label class="uk-form-label" for="form-stacked-text">Confirm Password</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" name="confirm_password" id="confirm-password" type="password" placeholder="Confirm password...">
+                            </div>
+                        </div>
+                        <div class="uk-margin-small">
+                            <label class="uk-form-label" for="form-stacked-text">Email</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" name="email" id="email" type="email" placeholder="Your email...">
+                            </div>
+                        </div>
+                        <div class="uk-margin-small">
+                            <label class="uk-form-label" for="form-stacked-text">Confirm Email</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" name="confirm_email" id="confirm-email" type="email" placeholder="Confirm email...">
+                            </div>
+                        </div>
+                        <div class="uk-margin">
+                            <button type="submit" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="uk-width-expand@m">
+                    <!-- <div class="uk-alert-danger" uk-alert>
+                        <a class="uk-alert-close" uk-close></a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+        <script>
+            var form = document.my_form;
+            form.addEventListener('submit', function() {
+                event.preventDefault();
+                validate();
+                alert('Sukses Submit!');
+            });
+
+            function validate() {
+                if (form.username.value == "") {
+                    UIkit.notification('Please provide your name!', 'danger');
+                    form.username.focus();
+                    return false;
+                } else if (form.password.value == '') {
+                    UIkit.notification('Please provide your password!', 'danger');
+                    form.password.focus();
+                    return false;
+                } else if (form.confirm_password.value == '') {
+                    UIkit.notification('Please provide confirm password!', 'danger');
+                    form.confirm_password.focus();
+                    return false;
+                } else if (form.email.value == '') {
+                    UIkit.notification('Please provide your email!', 'danger');
+                    form.email.focus();
+                    return false;
+                } else if (form.confirm_email.value == '') {
+                    UIkit.notification('Please provide confirm email!', 'danger');
+                    form.confirm_email.focus();
+                    return false;
+                } else if (form.password.value !== form.confirm_password.value) {
+                    UIkit.notification('Password and confim password should be the same', 'danger');
+                    form.confirm_password.focus();
+                    return false;
+                } else if (form.email.value !== form.confirm_email.value) {
+                    UIkit.notification('Email and confim email should be the same', 'danger');
+                    form.confirm_password.focus();
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.6/js/uikit.min.js"></script>
+</body>
+
+</html>
