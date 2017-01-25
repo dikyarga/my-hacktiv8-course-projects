@@ -126,4 +126,6 @@ console.log(analyzeDyingMessage("CODING")); // false
 console.log(analyzeDyingMessage("CHAMICAELOTNIELDAN")); // false
 console.log(analyzeDyingMessage("CHAMICAELOTNIELDANELLAINE")); // "Chamicael Otniel Dan Ellaine"
 console.log(analyzeDyingMessage("MARIAHCHARLIEOZIEDELEANOR")); // "Mariah Charlie Ozie D Eleanor"
+console.log(analyzeDyingMessage('KENAPACUMAOGUTYANGDITANGKAPEUY'));
 // bagian ini tidak boleh diubah
+console.log(analyzeDyingMessage('MEGUMINANAKNYAHYOIZABURO'));
